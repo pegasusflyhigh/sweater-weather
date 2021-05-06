@@ -41,30 +41,9 @@ app.get('/help', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
-    if(!req.query.address){
-        return res.send({
-            error: 'Address must be provided!'
-        })
-    } 
-    const address = req.query.address
-
-    geocode(address, (error, { latitude, longitude, location } = {} ) => {
-        if(error){
-            return res.send({
-                error
-            })
-        } 
-
-        forecast(latitude, longitude, location, (error, forecastData) => {
-            if(error) {
-                return res.send({
-                    error
-                })
-            }
-            res.send({
-                data: forecastData
-            })
-        })
+    res.render('index', {
+        title: 'Weather App', 
+        name: 'Bhuvna Prabhu'
     })
 })
 
@@ -82,6 +61,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up!')
-})
+app.listen(3000)
