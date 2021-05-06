@@ -1,7 +1,7 @@
 h1 {
   font-size: 64px;
   margin-bottom: 30px;
-  color:gray;
+  color:white;
 }
 
 .portrait {
@@ -13,7 +13,7 @@ h1 {
 }
 
 body {
-  color: #333333;
+  color: white;
   font-family:'Times New Roman', Times, serif;
   max-width: 650px;
   margin: 0 auto;
@@ -21,6 +21,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-image: url('/imgs/weather-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-content {
@@ -28,7 +32,7 @@ body {
 }
 
 footer {
-  color: #888888;
+  color: white;
   border-top: 1px solid #eeeeee;
   margin-top: 100px;
   padding: 10px 0;
@@ -40,7 +44,7 @@ header{
 }
 
 header a {
-  color: #888888;
+  color:whitesmoke;
   margin-right: 16px;
   text-decoration: none;
 }
@@ -53,7 +57,7 @@ input {
 button {
   cursor: pointer;
   border: 1px solid #888888;
-  background: #888888;
+  background:dimgrey;
   color: white;
   padding: 8px;
 }
