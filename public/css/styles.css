@@ -61,3 +61,13 @@ button {
   color: white;
   padding: 8px;
 }
+
+#weather-icon {
+  float: left;
+}
+
+#weather-description {
+    padding: 25px;
+    margin-left: 70px;
+    font-style: italic;
+}

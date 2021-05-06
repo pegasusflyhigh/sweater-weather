@@ -10,8 +10,12 @@ const forecast = (latitude, longitude, location, callback) => {
             callback(e.info, undefined)
         }else{
             temperature = currentWeather.temperature
-            location = location
-            callback(undefined, 'Currently it is ' + temperature + ' degrees' + ' in ' + location)
+            weatherIcon = currentWeather.weather_icons[0]
+            weatherDescription = currentWeather.weather_descriptions[0]
+            callback(undefined, { text: 'Currently it is ' + temperature + ' degrees' + ' in ' + location + '.',
+                                weatherIcon,
+                                weatherDescription
+                            })
         }
     })
 }
